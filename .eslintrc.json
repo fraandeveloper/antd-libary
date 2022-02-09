@@ -1,5 +1,7 @@
 {
-    "extends": ["airbnb", "airbnb/hooks"],
+    "extends": [
+        ",plugin:react/recommended"
+    ],
     "env": {
         "browser": true
     },
@@ -7,6 +9,6 @@
         "React": true
     },
     "rules": {
-        
+        "linebreak-style": 0
     }
 }

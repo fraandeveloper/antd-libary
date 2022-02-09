@@ -1,19 +1,18 @@
 module.exports = {
-  mode: 'development',
-  devtool: 'source-map',
+  mode: "development",
+  devtool: "source-map",
   output: {
-    filename: '[name].js',
-    chunkFilename: '[name].js',
-    libraryTarget: 'umd',
+    filename: "[name].js",
+    chunkFilename: "[name].js",
+    libraryTarget: "umd",
   },
-  plugins: [
-  ],
+  plugins: [],
   module: {
     rules: [
       {
-        enforce: 'pre',
-        test: /\.(js|jsx)$/,
-        loader: 'eslint-loader',
+        enforce: "pre",
+        test: /\.(ts|tsx)$/,
+        loader: "eslint-loader",
         exclude: /(node_modules)/,
         options: {
           cache: true,
@@ -22,13 +21,13 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          'style-loader',
+          "style-loader",
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               sourceMap: true,
               modules: {
-                localIdentName: '[path][name]__[local]',
+                localIdentName: "[path][name]__[local]",
               },
             },
           },
